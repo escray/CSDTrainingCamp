@@ -3,7 +3,6 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
-
 public class DollarTest {
     @Test
     public void testMultiplication() {
@@ -21,15 +20,14 @@ public class DollarTest {
 
     @Test
     public void testEquality() {
-        assertTrue((Money.dollar(5)).equals(Money.dollar(5)));
-        assertFalse((Money.dollar(5)).equals(Money.dollar(6)));
-        assertThat((Money.dollar(5)).equals(Money.dollar(5)), is(true));
-        assertThat((Money.dollar(5)).equals(Money.dollar(6)), is(false));
+        assertEquals((Money.dollar(5)), Money.dollar(5));
+        assertNotEquals((Money.dollar(5)), Money.dollar(6));
+        assertNotEquals(Money.franc(5), Money.dollar(5));
+    }
 
-        assertTrue(Money.franc(5).equals(Money.franc(5)));
-        assertFalse(Money.franc(5).equals(Money.franc(6)));
-
-        assertFalse(Money.franc(5).equals(Money.dollar(5)));
+    @Test
+    public void testDifferentClassEquality() {
+        assertEquals(new Money(10, "CHF"), new Franc(10, "CHF"));
     }
 
     @Test
