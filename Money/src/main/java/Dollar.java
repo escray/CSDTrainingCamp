@@ -1,17 +1,12 @@
-public class Dollar {
-    int amount;
+public class Dollar extends Money {
 
-    public Dollar(int amount) {
+    public Dollar(int amount, String currency) {
         this.amount = amount;
+        this.currency = currency;
     }
 
-    public Dollar times(int multiplier) {
-        return new Dollar(amount * multiplier);
+    public Money times(int multiplier) {
+        return Money.dollar(amount * multiplier);
     }
 
-    @Override
-    public boolean equals(Object object) {
-        Dollar dollar = (Dollar)object;
-        return amount == dollar.amount;
-    }
 }
