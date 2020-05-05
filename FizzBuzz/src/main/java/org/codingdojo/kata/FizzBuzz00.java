@@ -1,4 +1,4 @@
-public class FizzBuzz {
+public class FizzBuzz00 {
     public static  void  main(String[] args)
     {
         System.out.println("hello, world");
