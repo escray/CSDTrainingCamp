@@ -5,9 +5,9 @@ abstract class Money {
     protected Money() {
     }
 
-    public Money(int amount) {
+    public Money(int amount, String currency) {
         this.amount = amount;
-        currency = "USD";
+        this.currency = currency;
     }
 
     abstract Money times(int multiplier);
