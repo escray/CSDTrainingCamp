@@ -1,4 +1,4 @@
-package cn.xp.dojo;
+package org.codingdojo.kata;
 
 public class Calculator {
 
