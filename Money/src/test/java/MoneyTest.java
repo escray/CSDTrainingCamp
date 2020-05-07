@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
-public class DollarTest {
+public class MoneyTest {
     @Test
     public void testMultiplication() {
         Dollar five = Money.dollar(5);
