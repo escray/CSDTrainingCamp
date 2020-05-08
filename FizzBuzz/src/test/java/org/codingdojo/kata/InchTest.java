@@ -15,6 +15,5 @@ public class InchTest {
     @Test
     public void shoud_1_foot_equal_to_12_inches() {
 //        assertThat(new Foot(1), is(new Inch(12)));
-        new Length(1, "inch");
     }
 }
