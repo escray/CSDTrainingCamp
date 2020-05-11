@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.codingdojo.kata.Command01Test" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-11T15:52:33" hostname="10.0.0.9" time="0.019">
+  <properties/>
+  <testcase name="should_get_value_if_label_is_normal()" classname="org.codingdojo.kata.Command01Test" time="0.017"/>
+  <testcase name="should_get_negative_value_if_value_is_negative()" classname="org.codingdojo.kata.Command01Test" time="0.001"/>
+  <testcase name="should_get_default_value_if_value_is_empty()" classname="org.codingdojo.kata.Command01Test" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
