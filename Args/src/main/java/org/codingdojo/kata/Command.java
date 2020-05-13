@@ -39,7 +39,7 @@ public class Command {
         return true;
     }
 
-    public String getValue(String lable) {
-        return values.get(lable);
+    public String getValue(String label) {
+        return values.get(label);
     }
 }

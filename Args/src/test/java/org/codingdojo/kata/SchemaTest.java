@@ -16,7 +16,7 @@ public class SchemaTest {
     @Test
     void test_integer() {
         Schema schema = new Schema("p:int");
-        assertEquals(1, schema.getValue("l", "1"));
+        assertEquals(1, schema.getValue("p", "1"));
     }
 
     @Test

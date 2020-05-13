@@ -1,9 +1,8 @@
 package org.codingdojo.kata;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class Command01Test {
     @Test
@@ -29,4 +28,7 @@ public class Command01Test {
         assertEquals("true", command.getValue("l"));
         assertEquals("/usr/local", command.getValue("d"));
     }
+
+
+
 }
