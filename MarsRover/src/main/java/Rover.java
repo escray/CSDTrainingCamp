@@ -1,52 +1,21 @@
 public class Rover {
 
-    String direction;
+    Direction direction;
 
     public Rover() {
-        this.direction = "N";
+        direction = Direction.NORTH;
     }
 
     public String execute(String commands) {
         for (char c : commands.toCharArray()) {
             if (c == 'R') {
-                direction = rotateRight();
+                direction = direction.right();
             }
             if (c == 'L') {
-                direction = rotateLeft();
+                direction = direction.left();
             }
         }
-        return "0:0:" + this.direction;
+        return "0:0:" + direction.value();
     }
 
-    private String rotateRight() {
-        if (direction == "E") {
-            return "S";
-        }
-        else if (direction == "N") {
-            return "E";
-        }
-        else if (direction == "S") {
-            return  "W";
-        }
-        else if (direction == "W") {
-            return "N";
-        }
-        return direction;
-    }
-
-    private String rotateLeft() {
-        if (direction == "E") {
-            return "N";
-        }
-        else if (direction == "N") {
-            return "W";
-        }
-        else if (direction == "S") {
-            return  "E";
-        }
-        else if (direction == "W") {
-            return "S";
-        }
-        return direction;
-    }
 }
