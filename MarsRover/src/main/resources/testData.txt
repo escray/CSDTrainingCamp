@@ -1,2 +1,2 @@
 position:1,2,N;command:L,F,L,F,L,F,L,F,F,B,R,F
-
+position:3,3,E;command:F,F,R,F,F,R,F,R,R,F,L,F
