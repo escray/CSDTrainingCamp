@@ -6,13 +6,11 @@ import static org.junit.Assert.*;
 
 public class RoverTest {
 
-    private String positionAsString;
     private Rover rover;
 
     @Before
     public void setup() {
-        positionAsString = "1,2,N";
-        rover = new Rover(positionAsString);
+        rover = new Rover("1,2,N");
     }
 
     @Test
@@ -49,6 +47,45 @@ public class RoverTest {
     public void rover_should_forward() {
         rover.execute("F");
         assertThat(rover.direction.value(), is("N"));
-//        assertThat(rover.coordinate, is(new Coordinate(2,2)));
+        assertThat(rover.coordinate, is(new Coordinate(1,3)));
+    }
+
+    @Test
+    public void rover_should_forward_and_forward() {
+        rover.execute("FF");
+        assertThat(rover.coordinate, is(new Coordinate(1,4)));
+    }
+
+    @Test
+    public void rover_should_backward() {
+        rover.execute("B");
+        assertThat(rover.direction.value(), is("N"));
+        assertThat(rover.coordinate, is(new Coordinate(1,1)));
+        rover.execute("BB");
+        assertThat(rover.coordinate, is(new Coordinate(1,-1)));
+    }
+
+    @Test
+    public void rover_should_backward_and_forward() {
+        rover.execute("BF");
+        assertThat(rover.coordinate, is(new Coordinate(1,2)));
+    }
+
+    @Test
+    public void rover_should_move_free() {
+        String commands = "L,F,L,F,L,F,L,F,F,B,R,F".replace(",", "");
+        rover.execute(commands);
+        assertThat(rover.direction.value(), is("E"));
+        assertThat(rover.coordinate, is(new Coordinate(2,2)));
+    }
+
+    @Test
+    public void for_test_coverage() {
+        Rover southRover = new Rover("0,0,S");
+        assertThat(southRover.direction.value(), is("S"));
+        Rover westRover = new Rover("0,0,W");
+        assertThat(westRover.direction.value(), is("W"));
+        Direction direction = Direction.SOUTH;
+        assertThat(direction.directionMatch("x"), is(Direction.NORTH));
     }
 }

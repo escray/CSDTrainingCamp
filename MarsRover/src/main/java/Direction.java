@@ -14,13 +14,13 @@ public enum Direction {
         this.right = right;
     }
 
-    private Direction directionMatch(String value) {
+    public Direction directionMatch(String value) {
         for (Direction direction : values()) {
             if (direction.value == value) {
                return direction;
             }
         }
-        return null;
+        return Direction.NORTH;
     }
 
     public String value() {
