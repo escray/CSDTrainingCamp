@@ -1,0 +1,4 @@
+1kilometers,waiting0minutes
+3kilometers,waiting0minutes
+10kilometers,waiting0minutes
+2kilometers,waiting3minutes
