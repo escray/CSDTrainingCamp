@@ -18,16 +18,11 @@ public class Argument {
         return this.label.equals(label);
     }
 
+    // TODO: 6 lines ?
     public Object value() {
-        if (type.equals("boolean")) {
-            return parseBoolean(rawValue);
-        }
-        if (type.equals("integer")) {
-            return parseInt(rawValue);
-        }
-        if (type.equals("[string]")) {
-            return rawValue.split(",");
-        }
+        if (type.equals("boolean")) return parseBoolean(rawValue);
+        if (type.equals("integer")) return parseInt(rawValue);
+        if (type.equals("[string]")) return rawValue.split(",");
         return rawValue;
     }
 }

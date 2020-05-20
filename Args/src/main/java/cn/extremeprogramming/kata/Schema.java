@@ -19,12 +19,12 @@ public class Schema {
     }
 
     public ArgumentSpec specOf(String label) {
-        Optional<ArgumentSpec> candidate = argumentSpecs.stream()
-                .filter(spec -> spec.label.equals(label))
-                .findAny();
-        if (!candidate.isPresent()) {
-            throw new UnspecifiedArgument(label);
-        }
+        Optional<ArgumentSpec> candidate = getArgumentSpec(label);
+        if (!candidate.isPresent()) throw new UnspecifiedArgument(label);
         return candidate.get();
+    }
+
+    private Optional<ArgumentSpec> getArgumentSpec(String label) {
+        return argumentSpecs.stream().filter(spec -> spec.label.equals(label)).findAny();
     }
 }
