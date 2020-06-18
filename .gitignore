@@ -30,3 +30,5 @@ MarsRover/
 Taxi/
 keju/
 dojo-scaffold/
+Money/build/*
+Money/.gradle/*
