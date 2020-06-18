@@ -5,3 +5,5 @@ build
 *.ipr
 *.iws
 .DS_Store
+/.gradle/
+/build/
